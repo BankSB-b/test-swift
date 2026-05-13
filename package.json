@@ -1,0 +1,22 @@
+{
+  "name": "test-swift",
+  "version": "1.0.0",
+  "description": "for example job",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BankSB-b/test-swift.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BankSB-b/test-swift/issues"
+  },
+  "homepage": "https://github.com/BankSB-b/test-swift#readme",
+  "devDependencies": {
+    "@playwright/test": "^1.60.0",
+    "@types/node": "^25.7.0"
+  }
+}
