@@ -9,24 +9,27 @@ test.describe('UI Example ', () => {
 
   test('Test 1: Select Radio 2', async ({ page }) => {
     await page.locator('input[value="radio2"]').check();
+
     await expect(page.locator('input[value="radio2"]')).toBeChecked();
 
   });
 
   test('Test 2: Dynamic Dropdown - Search "Thai" and Select "Thailand"', async ({ page }) => {
     const dynamicInput = page.locator('input#autocomplete');
+
     await dynamicInput.fill('Thai');
     await page.waitForTimeout(500);
     await page.locator('text=Thailand').first().click();
-    await expect(dynamicInput).toHaveValue('Thailand');
 
+    await expect(dynamicInput).toHaveValue('Thailand');
   });
   
   test('Test 3: Static Dropdown - Select "API"', async ({ page }) => {
     const staticDropdown = page.locator('select#dropdown-class-example');
-    await staticDropdown.selectOption({ label: 'API' });
-    await expect(staticDropdown).toHaveValue('option3');
 
+    await staticDropdown.selectOption({ label: 'API' });
+
+    await expect(staticDropdown).toHaveValue('option3');
   });
 
   test('Test 4: Check Checkbox 1 and 3', async ({ page }) => {
@@ -42,7 +45,9 @@ test.describe('UI Example ', () => {
 
   test('Test 5: Mouse Hover', async ({ page }) => {
     const hoverButton = page.locator('#mousehover');
+
     await hoverButton.hover();
+
     await expect(page.locator('text=Top')).toBeVisible(); 
     await expect(page.locator('text=Reload')).toBeVisible(); 
   });
